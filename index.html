@@ -1,0 +1,81 @@
+<html>
+
+<body>
+  <h1>Authenticator (your token will appear below)</h1>
+  <div>
+
+    <div>
+      <label>Regular Token</label>
+      <input id="token" readonly />
+    </div>
+
+    <div>
+      <label>Authed State</label>
+      <input id="authedState" readonly />
+    </div>
+
+    <div>
+      <label>Identity Id</label>
+      <input id="identityId" readonly />
+    </div>
+
+    <div>
+      <label>Access Key Id</label>
+      <input id="accessKeyId" readonly />
+    </div>
+
+    <div>
+      <label>Secret Access Key</label>
+      <input id="secretAccessKey" readonly />
+    </div>
+
+    <div>
+      <label>Session Token</label>
+      <input id="sessionToken" readonly />
+    </div>
+
+    <hr/>
+
+    <div>
+      <label>Username</label>
+      <input id="username" />
+    </div>
+
+    <div>
+      <label>Password</label>
+      <input id="password" />
+    </div>
+
+    <div>
+      <label>New Password (optional, if first time login after creating the user as an admin.)</label>
+      <input id="newPassword" />
+    </div>
+
+    <div>
+      <button id="getAuthedCredentials">Get Authenticated Credentials (see hardcoded username and password)</button>
+    </div>
+
+    <div id="testUtilities" style="visibility: hidden;">
+      <button id="makeApiCallBtn">Make API Call</button>
+    </div>
+
+
+  </div>
+  <script src="dist/main.bundle.js"></script>
+
+  <!-- Files needed for the AWS SDK -->
+  <script type="text/javascript" src="dist/lib/axios/dist/axios.standalone.js"></script>
+  <script type="text/javascript" src="dist/lib/CryptoJS/rollups/hmac-sha256.js"></script>
+  <script type="text/javascript" src="dist/lib/CryptoJS/rollups/sha256.js"></script>
+  <script type="text/javascript" src="dist/lib/CryptoJS/components/hmac.js"></script>
+  <script type="text/javascript" src="dist/lib/CryptoJS/components/enc-base64.js"></script>
+  <script type="text/javascript" src="dist/lib/url-template/url-template.js"></script>
+  <script type="text/javascript" src="dist/lib/apiGatewayCore/sigV4Client.js"></script>
+  <script type="text/javascript" src="dist/lib/apiGatewayCore/apiGatewayClient.js"></script>
+  <script type="text/javascript" src="dist/lib/apiGatewayCore/simpleHttpClient.js"></script>
+  <script type="text/javascript" src="dist/lib/apiGatewayCore/utils.js"></script>
+  <script type="text/javascript" src="dist/apigClient.js"></script>
+
+</body>
+
+</html>
