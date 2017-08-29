@@ -1,0 +1,6 @@
+# Compiled and minified
+dist/*
+
+# Configuration
+postcss.config.js
+webpack.config.babel.js

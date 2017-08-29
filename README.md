@@ -1,7 +1,7 @@
 # This is an Example Project
 ## Learn how to use AWS API Gateway AWS_IAM Authentication via Cognito Federated Identities using Cognito User Pool logins.
 
-Tie together Cognito Federated Identities with Cognito User Pools to hit a Lambda integrated APIG secured via AWS_IAM temporray credentials.
+Tie together Cognito Federated Identities with Cognito User Pools to hit a Lambda integrated APIG secured via AWS_IAM temporary credentials.
 
 #### How it works
 
@@ -28,8 +28,8 @@ Run node-serverless to build out the backend. (uses Cloud Formation to create so
 npm install
 export AWS_ACCESS_KEY_ID="XXXXXXXXXXXX"
 export AWS_SECRET_ACCESS_KEY="XXXXXXXXXXXX"
-npx serverless deploy
-npm run watch
+npm run deploy-aws
+npm run dev
 ```
 
 See `src/main.js` for the code and make sure to carefully read the comments in the code. If you want the apigClient to work go to your APIG and snag the generated SDK for Javascript and dump all the files in dist.
