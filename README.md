@@ -1,13 +1,15 @@
 # This is an Example Project
 ## Learn how to use AWS API Gateway AWS_IAM Authentication via Cognito Federated Identities using Cognito User Pool logins.
 
+![AWS Stack](AWSStack.png)
+
 Tie together Cognito Federated Identities with Cognito User Pools to hit a Lambda integrated APIG secured via AWS_IAM temporary credentials.
 
 #### How it works
 
 I noticed there is a lot of confusion for developers trying to link together all these concepts. Understandably because the easiest route to obtaining the JWT from user pools has to be done with front-end scripts [identity](https://github.com/aws/amazon-cognito-identity-js)/[auth](https://github.com/aws/amazon-cognito-auth-js) which are lacking in documentation with outdated code examples.
 
-We use [node-serverless](LINK) to create the AWS stack for us (I recommend learning to do this by hand), and then we use the [amazon-cognito-identity.js library](https://github.com/aws/amazon-cognito-identity-js) to get our JWT from Cognito User Pools. With the JWT we can use `CognitoIdentityCredentials()` to auth and get an `accessKeyId`, `secretAccessKey` and a `sessionToken` from [Cognito Federated Identities](https://console.aws.amazon.com/cognito).
+We use the [amazon-cognito-identity.js library](https://github.com/aws/amazon-cognito-identity-js) to get our JWT from Cognito User Pools. With the JWT we can use `CognitoIdentityCredentials()` to auth and get an `accessKeyId`, `secretAccessKey` and a `sessionToken` from [Cognito Federated Identities](https://console.aws.amazon.com/cognito).
 
 ### Install and run
 
@@ -22,13 +24,10 @@ export default {
 }
 ```
 
-Run node-serverless to build out the backend. (uses Cloud Formation to create some sample Lambda functions, the APIG, And all needed IAM Roles/Perms, and the Cognito Federated Identities and Pools)
+You will need to create a Lambda function, the APIG and integrate it, and all needed IAM Roles/Perms, and the Cognito Federated Identities and Pools). To do this a little more quickly check out the [node-serverless](https://serverless.com/) project.
 
 ```bash
 npm install
-export AWS_ACCESS_KEY_ID="XXXXXXXXXXXX"
-export AWS_SECRET_ACCESS_KEY="XXXXXXXXXXXX"
-npm run deploy-aws
 npm run dev
 ```
 
