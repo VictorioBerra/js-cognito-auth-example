@@ -1,5 +1,4 @@
-# This is an Example Project
-## Learn how to use AWS API Gateway AWS_IAM Authentication via Cognito Federated Identities using Cognito User Pool logins.
+## Build serverless applications using AWS API Gateway AWS_IAM Authentication via Cognito Federated Identities using Cognito User Pool logins with this sample code for the web.
 
 ![AWS Stack](AWSStack.png)
 
@@ -24,7 +23,7 @@ export default {
 }
 ```
 
-You will need to create a Lambda function, the APIG and integrate it, and all needed IAM Roles/Perms, and the Cognito Federated Identities and Pools). To do this a little more quickly check out the [node-serverless](https://serverless.com/) project.
+You will need to create a Lambda function, the APIG and integrate it, and all needed IAM Roles/Perms, and the Cognito Federated Identities and Pools). To do this a little more quickly check out the [node-serverless](https://serverless.com/) project There are some samples that can get you up and running with CRUD applications, although you may still have to do the Cognito Identity stuff yourself. Blogpost coming soon.
 
 ```bash
 npm install
