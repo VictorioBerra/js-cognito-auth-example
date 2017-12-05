@@ -120,7 +120,9 @@ Config.credentials.get(function() {
                 // authentication.
 
                 // the api doesn't accept this field back
+                console.log(userAttributes);
                 delete userAttributes.email_verified;
+                delete userAttributes.phone_number_verified;
 
                 // Get these details and call
                 cognitoUser.completeNewPasswordChallenge(document.getElementById('newPassword').value, userAttributes, this);
